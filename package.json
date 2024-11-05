@@ -7,7 +7,7 @@
     "build": "set NODE_OPTIONS=--openssl-legacy-provider && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "api": "json-server db.json"
+    "api": "json-server src/assets/db.json"
   },
   "private": true,
   "dependencies": {
