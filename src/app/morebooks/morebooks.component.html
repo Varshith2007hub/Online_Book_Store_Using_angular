@@ -1,0 +1,14 @@
+<br>
+<div class="container book-list">
+<div *ngFor="let book of Books" >
+    <div class="card book-item mb-2" >
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.0JmYG5E90CH44HqiMM05iwHaLH?pid=ImgDet&rs=1" alt="Card image cap" height="200px">
+        <div class="card-body">
+            <h5 class="card-title">{{ book.bookTitle }}</h5>
+            <p class="card-text">{{ book.bookDescription }}</p>
+            <a class="btn btn-primary" >Buy Now</a>
+        </div>
+    </div>
+</div>
+</div>
+<div style="text-align: center;"><a href="" routerLink="">show Less</a></div>

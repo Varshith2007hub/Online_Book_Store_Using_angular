@@ -1,0 +1,65 @@
+<br>
+<div style="display: flex; ">
+<div class="card "style="width:40%">
+    <div class="card-body">
+      <h5 class="card-title">Shipment Details</h5>
+      <p class="card-text"><b>Name:{{ address.name}}</b></p>
+      <p class="card-text"><b>Shipment Address: </b>{{address.ship}}</p>
+      <p class="card-text"><b>Pincode:</b>{{address.pincode}}</p>
+      <p class="card-text"><b>Phone number:</b>{{address.Phonenumber}}</p>
+      <a href="#" class="btn btn-primary" routerLink="editaddress">Edit Address</a>
+    </div>
+  </div >
+  <div style="border: 1px solid rgba(0, 0, 0, .4);width: 100%;">
+    <b>Books in The cart</b>
+    <div class="card-body"style="width:50%;">
+        <div *ngFor="let user of cart">
+            <div class="container">
+              <div class="card border-success"  style="height: 3rem;width: 50rem;"> 
+                  <div class="card-body">
+                  <span>{{user.bookTitle}}</span>
+                  <a href="" style="float: right; color: red;" (click)="deletebooks(user.id)" >remove</a>
+                  </div>
+                </div></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div style="display: flex;">
+    <div style="width: 30rem;">
+        <router-outlet></router-outlet>
+      </div>
+<div class="card "style="width:40%;float: right;margin: 12px;">
+    <div class="card-header py-3">
+        <h5 class="mb-0">Billing Details</h5>
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+            Products
+            <span>{{sum}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+            Shipping
+            <span>{{avg}}</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+            <div>
+              <strong>Total amount</strong>
+              <strong>
+                <p class="mb-0">(including VAT)</p>
+              </strong>
+            </div>
+            <span><strong>{{sum+avg}}</strong></span>
+          </li>
+        </ul>
+
+        <button type="button" class="btn btn-primary btn-lg btn-block" (click)="update(cart) ">
+          Proceed to Pay
+        </button>
+      </div>
+  </div>
+  
+</div>

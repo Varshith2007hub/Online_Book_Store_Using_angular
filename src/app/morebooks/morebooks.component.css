@@ -1,0 +1,10 @@
+.book-list{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+.book-item {
+    width: 15rem;
+}

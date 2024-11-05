@@ -1,0 +1,43 @@
+<br>
+<div class="row">
+    <div class="col-sm-3" style="height: 250px;">
+      <div class="card" style="width: 250px;height: 250;">
+         <img src="https://th.bing.com/th/id/OIP.0JmYG5E90CH44HqiMM05iwHaLH?pid=ImgDet&rs=1" height="330px" alt="">
+      </div>
+    </div>
+    <div class="col-sm-3 ">
+      <div class=" card border-0" >
+        <div>
+            <b>{{book.bookTitle}}</b>
+        </div>
+        <table class="table table-borderless">
+            <tr>
+                <td>Book Price</td>
+                <td>{{book.bookPrice}}</td>
+            </tr>
+            <tr>
+              <td>Author name</td>
+              <td>{{book.author}}</td>
+          </tr>
+          <tr>
+              <td>pageCount</td>
+              <td>{{book.pageCount}}</td>
+          </tr>
+          <tr>
+              <td>ISBN</td>
+              <td>{{book.ISBN}}</td>
+          </tr>
+        </table>
+      </div>
+      <a class="btn btn-primary" (click)="Addtocart1(book)" style="margin: 12px;">Buy Now</a>
+      <a class="btn btn-primary" (click)="Addtocart(book)" routerLink="">Add to Cart</a>
+    </div>
+  </div>
+  <br>
+  <div class="card" style="width: 50%;height: 300px;float:inline-end;">
+    <div class="card-body">
+        <h3 class="card-title">Book Description</h3>
+        <p class="card-text">{{ book.bookDescription }}</p>
+    </div>
+
+</div>
